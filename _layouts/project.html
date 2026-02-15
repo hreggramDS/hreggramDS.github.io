@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<article class="project">
+  <header class="project-header">
+    <h1 class="project-title">{{ page.title }}</h1>
+    
+    <div class="project-meta">
+      {% if page.date %}
+        <div class="project-date">
+          <strong>Date:</strong> {{ page.date | date: "%B %Y" }}
+        </div>
+      {% endif %}
+      
+      {% if page.status %}
+        <div class="project-status">
+          <strong>Status:</strong> <span class="status-{{ page.status | downcase | replace: ' ', '-' }}">{{ page.status }}</span>
+        </div>
+      {% endif %}
+      
+      {% if page.team %}
+        <div class="project-team">
+          <strong>Team:</strong> {{ page.team | join: ', ' }}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if page.description %}
+      <p class="project-description">{{ page.description }}</p>
+    {% endif %}
+
+    {% if page.technologies %}
+      <div class="project-technologies">
+        <strong>Technologies:</strong>
+        {% for tech in page.technologies %}
+          <span class="tech-tag">{{ tech }}</span>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if page.github or page.demo or page.paper %}
+      <div class="project-links">
+        {% if page.github %}
+          <a href="{{ page.github }}" class="project-link" target="_blank">
+            📁 GitHub Repository
+          </a>
+        {% endif %}
+        {% if page.demo %}
+          <a href="{{ page.demo }}" class="project-link" target="_blank">
+            🚀 Live Demo
+          </a>
+        {% endif %}
+        {% if page.paper %}
+          <a href="{{ page.paper }}" class="project-link" target="_blank">
+            📄 Paper
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </header>
+
+  {% if page.thumbnail %}
+    <div class="project-thumbnail">
+      <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}" />
+    </div>
+  {% endif %}
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
+  {% if page.domain %}
+  <footer class="project-footer">
+    <div class="project-domain">
+      <strong>Domain:</strong>
+      {% for domain in page.domain %}
+        {{ domain }}{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </div>
+  </footer>
+  {% endif %}
+</article>
+
+<nav class="project-navigation">
+  <a href="{{ '/pages/projects' | relative_url }}" class="back-to-projects">
+    ← Back to Projects
+  </a>
+</nav>

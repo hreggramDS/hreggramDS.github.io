@@ -1,0 +1,37 @@
+<div class="project-card">
+  {% if include.thumbnail %}
+  <div class="project-thumbnail">
+    <a href="{{ include.url | relative_url }}">
+      <img src="{{ include.thumbnail | relative_url }}" alt="{{ include.title }}">
+    </a>
+  </div>
+  {% endif %}
+  
+  <div class="project-info">
+    <h3><a href="{{ include.url | relative_url }}">{{ include.title }}</a></h3>
+    
+    {% if include.description %}
+    <p class="project-description">{{ include.description }}</p>
+    {% endif %}
+    
+    {% if include.technologies %}
+    <div class="project-tech">
+      {% assign techs = include.technologies | split: "," %}
+      {% for tech in techs limit:5 %}
+        <span class="tech-badge">{{ tech | strip }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if include.status or include.date %}
+    <p class="project-meta">
+      {% if include.status %}
+        <span class="status-{{ include.status | downcase | replace: ' ', '-' }}">{{ include.status }}</span>
+      {% endif %}
+      {% if include.date %} | {{ include.date }}{% endif %}
+    </p>
+    {% endif %}
+    
+    <a href="{{ include.url | relative_url }}" class="read-more">View Project →</a>
+  </div>
+</div>

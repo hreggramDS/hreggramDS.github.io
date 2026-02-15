@@ -1,0 +1,14 @@
+<figure class="image-figure">
+  <img src="{{ include.src | relative_url }}" 
+       alt="{{ include.alt | default: include.caption }}"
+       {% if include.width %}width="{{ include.width }}"{% endif %}
+       {% if include.height %}height="{{ include.height }}"{% endif %}>
+  {% if include.caption %}
+  <figcaption>
+    {% if include.number %}
+      <strong>Figure {{ include.number }}:</strong> 
+    {% endif %}
+    {{ include.caption }}
+  </figcaption>
+  {% endif %}
+</figure>

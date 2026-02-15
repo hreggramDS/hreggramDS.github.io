@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<article class="pipeline">
+  <header class="pipeline-header">
+    <h1 class="pipeline-title">{{ page.title }}</h1>
+    
+    <div class="pipeline-meta">
+      {% if page.version %}
+        <div class="pipeline-version">
+          <strong>Version:</strong> {{ page.version }}
+        </div>
+      {% endif %}
+      
+      {% if page.date %}
+        <div class="pipeline-date">
+          <strong>Last Updated:</strong> {{ page.date | date: "%B %d, %Y" }}
+        </div>
+      {% endif %}
+      
+      {% if page.domain %}
+        <div class="pipeline-domain">
+          <strong>Domain:</strong> {{ page.domain }}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if page.description %}
+      <p class="pipeline-description">{{ page.description }}</p>
+    {% endif %}
+
+    {% if page.technologies %}
+      <div class="pipeline-technologies">
+        <strong>Technologies:</strong>
+        {% for tech in page.technologies %}
+          <span class="tech-tag">{{ tech }}</span>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if page.repository or page.documentation %}
+      <div class="pipeline-links">
+        {% if page.repository %}
+          <a href="{{ page.repository }}" class="pipeline-link" target="_blank">
+            📁 Repository
+          </a>
+        {% endif %}
+        {% if page.documentation %}
+          <a href="{{ page.documentation }}" class="pipeline-link" target="_blank">
+            📚 Documentation
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </header>
+
+  <div class="pipeline-content">
+    {{ content }}
+  </div>
+</article>
+
+<nav class="pipeline-navigation">
+  <a href="{{ '/pages/pipelines' | relative_url }}" class="back-to-pipelines">
+    ← Back to Pipelines
+  </a>
+</nav>

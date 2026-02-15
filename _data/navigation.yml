@@ -1,0 +1,23 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /pages/about/
+  - title: "Projects"
+    url: /pages/projects/
+  - title: "Pipelines"
+    url: /pages/pipelines/
+  - title: "Publications"
+    url: /pages/publications/
+  - title: "Blog"
+    url: /blog/
+  - title: "Contact"
+    url: /pages/contact/
+
+footer:
+  - title: "GitHub"
+    url: https://github.com/hreggramDS
+  - title: "LinkedIn"
+    url: "#"  # Add your profile
+  - title: "RSS"
+    url: /feed.xml

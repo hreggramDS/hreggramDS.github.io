@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<article class="page">
+  <header>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="page-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="page-content">
+    {{ content }}
+  </div>
+
+  {% if page.last_modified_at %}
+  <footer class="page-footer">
+    <p><small>Last updated: {{ page.last_modified_at | date: "%B %d, %Y" }}</small></p>
+  </footer>
+  {% endif %}
+</article>
