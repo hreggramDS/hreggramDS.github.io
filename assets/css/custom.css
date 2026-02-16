@@ -1,5 +1,54 @@
 /* Custom CSS to enhance Jekyll Theme Slate */
 
+/* Text readability fixes for Slate theme */
+body,
+p,
+li,
+td,
+th,
+dd,
+dt,
+blockquote {
+    color: #e0e0e0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #ffffff;
+}
+
+a {
+    color: #6db3f2;
+}
+
+a:hover {
+    color: #9dceff;
+}
+
+strong,
+b {
+    color: #f0f0f0;
+}
+
+table th {
+    color: #ffffff;
+    background-color: #333;
+}
+
+table td {
+    color: #e0e0e0;
+}
+
+code,
+pre {
+    color: #e0e0e0;
+    background-color: #2d2d2d;
+}
+
 /* Layout improvements */
 .container {
     max-width: 1200px;
