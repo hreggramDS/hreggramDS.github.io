@@ -1,0 +1,47 @@
+# Project metadata for use in templates and data-driven pages
+# This supplements the front matter in _projects/*.md files
+
+- name: scrna-analysis
+  title: "Single-Cell RNA Sequencing Analysis"
+  date: 2025-01-15
+  status: "In Progress"
+  domain: ["Bioinformatics", "Machine Learning"]
+  technologies: ["Python", "Scanpy", "scRNA-seq", "Jupyter"]
+  description: "Comprehensive analysis pipeline for single-cell RNA sequencing data"
+  featured: true
+
+- name: tda-quantum-systems
+  title: "Topological Data Analysis for Quantum Systems"
+  date: 2022-05-15
+  status: "Completed"
+  domain: ["Physics", "Topological Data Analysis"]
+  technologies: ["Python", "NumPy", "SciPy", "Ripser", "GUDHI"]
+  description: "Applied persistent homology and topological invariants to detect phase transitions in many-body localized quantum systems"
+  featured: true
+
+- name: predictive-maintenance
+  title: "Predictive Maintenance for Heavy Equipment"
+  date: 2024-06-01
+  status: "In Progress"
+  domain: ["Machine Learning", "Industrial IoT"]
+  technologies: ["Python", "XGBoost", "LightGBM", "Spark", "AWS"]
+  description: "ML system for predicting component failures in construction and mining equipment using sensor telemetry"
+  featured: true
+
+- name: heavy-ion-tda
+  title: "TDA for Relativistic Heavy-Ion Collisions"
+  date: 2021-08-01
+  status: "Completed"
+  domain: ["Physics", "Topological Data Analysis"]
+  technologies: ["Python", "C++", "ROOT", "NumPy", "Ripser"]
+  description: "Topological analysis of particle production patterns in relativistic heavy-ion collision data"
+  featured: true
+
+- name: consulting-analytics
+  title: "Advanced Analytics for Management Consulting"
+  date: 2023-03-01
+  status: "Completed"
+  domain: ["Business Intelligence", "Machine Learning"]
+  technologies: ["Python", "scikit-learn", "SQL", "Tableau"]
+  description: "Data-driven frameworks for strategic decision-making across Fortune 500 engagements at BCG"
+  featured: true

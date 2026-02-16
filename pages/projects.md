@@ -47,37 +47,41 @@ Explore my data science and research projects across various domains including b
 
 ## All Projects
 
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="bioinformatics">Bioinformatics</button>
+  <button class="filter-btn" data-filter="machine learning">Machine Learning</button>
+  <button class="filter-btn" data-filter="physics">Physics</button>
+  <button class="filter-btn" data-filter="topological data analysis">TDA</button>
+  <button class="filter-btn" data-filter="business intelligence">Business</button>
+</div>
+
 {% assign all_projects = site.projects | sort: "date" | reverse %}
 
 {% if all_projects.size > 0 %}
-<div class="projects-list">
+<div class="projects-grid">
   {% for project in all_projects %}
-  <div class="project-list-item">
-    <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
-    <p class="project-date">{{ project.date | date: "%B %Y" }}</p>
-    <p>{{ project.description }}</p>
-    {% if project.domain %}
-    <p class="project-domains">
-      <strong>Domain:</strong> {{ project.domain | join: ', ' }}
-    </p>
-    {% endif %}
+  <div class="project-card" data-domain="{{ project.domain | join: ',' }}">
+    <div class="project-info">
+      <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+      <p class="project-description">{{ project.description }}</p>
+      {% if project.technologies %}
+      <div class="project-tech">
+        {% for tech in project.technologies limit:4 %}
+          <span class="tech-badge">{{ tech }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <p class="project-meta">
+        {% if project.status %}<span class="status-{{ project.status | downcase | replace: ' ', '-' }}">{{ project.status }}</span>{% endif %}
+        {% if project.date %} | {{ project.date | date: "%B %Y" }}{% endif %}
+      </p>
+      <a href="{{ project.url | relative_url }}" class="read-more">View Project →</a>
+    </div>
   </div>
   {% endfor %}
 </div>
 {% else %}
 <p><em>Projects will be added soon. Check back later!</em></p>
 {% endif %}
-
----
-
-## Filter by Domain
-
-*Coming soon: Filter projects by domain, technology, or status*
-
-## Project Categories
-
-- **Bioinformatics**: scRNA-seq, genomics, systems biology
-- **Machine Learning**: Classification, clustering, deep learning
-- **Physics & Scientific Computing**: Quantum systems, topological analysis
-- **Data Engineering**: Pipelines, ETL, infrastructure
 - **Visualization**: Interactive dashboards, scientific figures

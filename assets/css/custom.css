@@ -300,3 +300,249 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* ===========================
+   Phase 2/3 Additions
+   =========================== */
+
+/* Filter bar */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0 30px;
+}
+
+.filter-btn {
+    padding: 6px 16px;
+    border: 2px solid #3498db;
+    background: transparent;
+    color: #3498db;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #3498db;
+    color: #fff;
+}
+
+/* Tag cloud */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.tag-cloud-item {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #ecf0f1;
+    border-radius: 15px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background 0.2s;
+}
+
+.tag-cloud-item:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+/* Category & tag archive lists */
+.category-posts li,
+.tag-posts li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.category-posts .post-date,
+.tag-posts .post-date {
+    color: #999;
+    font-size: 0.85em;
+    white-space: nowrap;
+    margin-left: 15px;
+}
+
+.post-count {
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* Publication entries */
+.publication-entry {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+}
+
+.pub-title {
+    margin-bottom: 4px;
+}
+
+.pub-authors {
+    color: #555;
+    margin: 2px 0;
+}
+
+.pub-venue {
+    margin: 2px 0;
+}
+
+.pub-abstract {
+    color: #666;
+    font-size: 0.95em;
+}
+
+.pub-links {
+    margin-top: 6px;
+}
+
+.pub-link {
+    display: inline-block;
+    padding: 3px 10px;
+    background: #34495e;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-right: 5px;
+    transition: background 0.2s;
+}
+
+.pub-link:hover {
+    background: #3498db;
+}
+
+/* Pipeline cards */
+.pipeline-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pipeline-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.pipeline-card-meta {
+    margin: 8px 0;
+}
+
+.version-badge {
+    display: inline-block;
+    background: #27ae60;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-right: 8px;
+}
+
+.domain-label {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Skills matrix table */
+.skills-matrix table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skills-matrix th,
+.skills-matrix td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.skills-matrix th {
+    background: #f5f5f5;
+    font-weight: 600;
+    width: 30%;
+}
+
+/* Project card transitions for filtering */
+.project-card {
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.3s;
+}
+
+/* Category badge */
+.category-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #2c3e50;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.85em;
+    margin: 3px;
+    transition: background 0.2s;
+}
+
+.category-badge:hover {
+    background: #3498db;
+}
+
+/* Post preview on homepage */
+.post-preview {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.post-preview:last-child {
+    border-bottom: none;
+}
+
+.post-date {
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* Image figures */
+.image-figure {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.image-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.image-figure figcaption {
+    margin-top: 10px;
+    color: #666;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .filter-bar {
+        justify-content: center;
+    }
+
+    .category-posts li,
+    .tag-posts li {
+        flex-direction: column;
+    }
+
+    .category-posts .post-date,
+    .tag-posts .post-date {
+        margin-left: 0;
+    }
+}

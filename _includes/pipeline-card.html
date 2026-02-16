@@ -1,0 +1,25 @@
+<div class="pipeline-card">
+  <h3><a href="{{ include.url | relative_url }}">{{ include.title }}</a></h3>
+  
+  {% if include.version or include.domain %}
+  <div class="pipeline-card-meta">
+    {% if include.version %}<span class="version-badge">v{{ include.version }}</span>{% endif %}
+    {% if include.domain %}<span class="domain-label">{{ include.domain }}</span>{% endif %}
+  </div>
+  {% endif %}
+  
+  {% if include.description %}
+  <p class="pipeline-description">{{ include.description }}</p>
+  {% endif %}
+  
+  {% if include.technologies %}
+  <div class="pipeline-tech">
+    {% assign techs = include.technologies | split: "," %}
+    {% for tech in techs limit:5 %}
+      <span class="tech-badge">{{ tech | strip }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+  
+  <a href="{{ include.url | relative_url }}" class="read-more">View Documentation →</a>
+</div>

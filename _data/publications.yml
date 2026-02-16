@@ -1,0 +1,47 @@
+# Publications data file
+# Used by the publications page template when data-driven rendering is enabled
+
+dissertation:
+  title: "Topological Data Analytics in Quantum Systems"
+  author: "Greg Hamilton"
+  institution: "University of Illinois at Urbana-Champaign"
+  year: 2022
+  type: "dissertation"
+  url: "#"  # Add ProQuest link
+
+papers:
+  - title: "Persistent Homology of Many-Body Localization"
+    authors: "G. Hamilton et al."
+    venue: "Physical Review B"
+    year: 2022
+    type: "journal"
+    abstract: "Applied topological data analysis to detect phase transitions in disordered quantum spin chains."
+    arxiv: "#"
+    github: "https://github.com/hreggramDS/tda-quantum"
+
+  - title: "Topological Signatures in Heavy-Ion Collisions"
+    authors: "G. Hamilton et al."
+    venue: "Working paper"
+    year: 2021
+    type: "journal"
+    abstract: "Used persistent homology to analyze spatial structure of particle production in relativistic heavy-ion collisions."
+    arxiv: "#"
+
+presentations:
+  - title: "Topological Data Analysis for Quantum Phase Transitions"
+    conference: "APS March Meeting"
+    location: "Las Vegas, NV"
+    year: 2023
+    type: "talk"
+
+  - title: "Persistent Homology in Relativistic Heavy-Ion Collisions"
+    conference: "APS Division of Nuclear Physics"
+    location: "New Orleans, LA"
+    year: 2021
+    type: "talk"
+
+  - title: "Applications of TDA to Disordered Quantum Systems"
+    conference: "Topology, Algebra, and Geometry in Data Science (TAGDS)"
+    location: "Columbus, OH"
+    year: 2022
+    type: "poster"

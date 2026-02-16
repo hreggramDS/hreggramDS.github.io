@@ -1,0 +1,14 @@
+<div class="publication-entry">
+  <p class="pub-title"><strong>{{ include.title }}</strong></p>
+  <p class="pub-authors">{{ include.authors }}</p>
+  <p class="pub-venue"><em>{{ include.venue }}</em>{% if include.year %}, {{ include.year }}{% endif %}</p>
+  {% if include.abstract %}
+  <p class="pub-abstract">{{ include.abstract }}</p>
+  {% endif %}
+  <p class="pub-links">
+    {% if include.pdf %}<a href="{{ include.pdf }}" class="pub-link">PDF</a>{% endif %}
+    {% if include.doi %}<a href="{{ include.doi }}" class="pub-link">DOI</a>{% endif %}
+    {% if include.arxiv %}<a href="{{ include.arxiv }}" class="pub-link">arXiv</a>{% endif %}
+    {% if include.github %}<a href="{{ include.github }}" class="pub-link">Code</a>{% endif %}
+  </p>
+</div>

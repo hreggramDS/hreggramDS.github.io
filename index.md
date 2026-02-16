@@ -13,16 +13,16 @@ Welcome! I'm a data science leader with a unique background bridging theoretical
 
 ## What I Do
 
-🔬 **Bioinformatics & Computational Biology**  
+**Bioinformatics & Computational Biology**  
 Single-cell RNA sequencing, genomics analysis, and biological data interpretation
 
-🤖 **Machine Learning & AI**  
+**Machine Learning & AI**  
 Model development, deployment, and scaling for real-world applications
 
-📊 **Topological Data Analysis**  
+**Topological Data Analysis**  
 Applying persistent homology and topological methods to complex data structures
 
-🏗️ **Data Science Leadership**  
+**Data Science Leadership**  
 Building teams, defining strategy, and delivering measurable business impact
 
 ---
@@ -115,10 +115,10 @@ Building teams, defining strategy, and delivering measurable business impact
 ## Current Focus
 
 I'm currently working on:
-- 🧬 Advanced single-cell RNA sequencing analysis methodologies
-- 🤖 Machine learning applications in industrial settings
-- 📊 Topological data analysis for complex systems
-- 👥 Building and mentoring high-performing data science teams
+- Advanced single-cell RNA sequencing analysis methodologies
+- Machine learning applications in industrial settings
+- Topological data analysis for complex systems
+- Building and mentoring high-performing data science teams
 
 ---
 
